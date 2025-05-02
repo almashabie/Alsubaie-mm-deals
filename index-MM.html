@@ -1,0 +1,46 @@
+
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>وسيط بيع وشراء</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>منصة الوسيط الآمن</h1>
+        <p>نحتفظ بالمبلغ حتى تأكيد استلام السلعة من الطرف الثاني</p>
+    </header>
+    <main>
+        <form id="escrowForm">
+            <h2>بيانات الصفقة</h2>
+            <label>اسم البائع:</label>
+            <input type="text" id="seller" required>
+
+            <label>اسم المشتري:</label>
+            <input type="text" id="buyer" required>
+
+            <label>قيمة الصفقة (ر.س):</label>
+            <input type="number" id="amount" required>
+
+            <label>تفاصيل السلعة:</label>
+            <textarea id="details" required></textarea>
+
+            <button type="submit">إنشاء الصفقة</button>
+        </form>
+
+        <div id="transactionSummary" class="hidden">
+            <h2>ملخص الصفقة</h2>
+            <p><strong>البائع:</strong> <span id="summarySeller"></span></p>
+            <p><strong>المشتري:</strong> <span id="summaryBuyer"></span></p>
+            <p><strong>قيمة الصفقة:</strong> <span id="summaryAmount"></span> ر.س</p>
+            <p><strong>تفاصيل السلعة:</strong> <span id="summaryDetails"></span></p>
+        </div>
+    </main>
+    <footer>
+        <p>جميع الحقوق محفوظة &copy; 2025</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
